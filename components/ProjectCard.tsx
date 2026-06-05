@@ -9,7 +9,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <h2>{project.name}</h2>
         <p>{project.summary}</p>
       </div>
-      <ul className="tag-list" aria-label={`${project.name} technologies`}>
+      <ul className="tag-list" aria-label={`${project.name} Technologies`}>
         {project.stack.map((item) => (
           <li key={item}>{item}</li>
         ))}

@@ -4,10 +4,10 @@ export default function ExperiencePage() {
   return (
     <>
       <section className="section simple-page-heading">
-        <p className="section-label">professional work</p>
+        <p className="section-label">Professional Work</p>
         <div className="simple-heading-row">
-          <h1>experience</h1>
-          <p>internship and capstone work across backend systems, observability, and ML deployment</p>
+          <h1>Experience</h1>
+          <p>Internship and capstone work across backend systems, observability, and ML deployment.</p>
         </div>
       </section>
       <section className="section compact-top">
@@ -31,7 +31,7 @@ export default function ExperiencePage() {
                   <p className="experience-description">{item.contribution}</p>
                 </div>
               </div>
-              <ul className="tag-list experience-stack" aria-label={`${item.title} technologies`}>
+              <ul className="tag-list experience-stack" aria-label={`${item.title} Technologies`}>
                 {item.stack.map((technology) => (
                   <li key={technology}>{technology}</li>
                 ))}

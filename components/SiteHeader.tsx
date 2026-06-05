@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navItems, profile } from "../lib/content";
@@ -10,11 +11,19 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="nav-shell">
-        <Link className="brand" href="/" aria-label={`${profile.name} home`}>
-          <span className="brand-mark">SA</span>
+        <Link className="brand" href="/" aria-label={`${profile.name} Home`}>
+          <span className="brand-mark">
+            <Image
+              src="/images/profile-photo.jpeg"
+              alt=""
+              width={34}
+              height={34}
+              priority
+            />
+          </span>
           <span>{profile.name}</span>
         </Link>
-        <nav className="site-nav" aria-label="Main navigation">
+        <nav className="site-nav" aria-label="Main Navigation">
           {navItems.map((item) => {
             const isActive =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);

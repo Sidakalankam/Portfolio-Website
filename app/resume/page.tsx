@@ -7,7 +7,7 @@ export default function ResumePage() {
     <>
       <PageHeader
         kicker="Resume"
-        title="A resume page built for scanning."
+        title="A Resume Page Built for Scanning"
         description="Keep a PDF download here, but make the web version readable without forcing a recruiter to open a file."
       />
       <section className="section compact-top resume-layout">
@@ -21,7 +21,7 @@ export default function ResumePage() {
         <div className="resume-main">
           <section>
             <h2>Education</h2>
-            <p className="strong">Add your university and degree</p>
+            <p className="strong">Add Your University and Degree</p>
             <p>Computer Science / Software Engineering / related coursework.</p>
           </section>
           <section>

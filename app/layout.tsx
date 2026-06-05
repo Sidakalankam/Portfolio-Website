@@ -6,6 +6,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: `${profile.name} | Portfolio`,
   description: profile.title,
+  icons: {
+    icon: "/images/profile-photo.jpeg",
+    shortcut: "/images/profile-photo.jpeg",
+    apple: "/images/profile-photo.jpeg",
+  },
 };
 
 export default function RootLayout({

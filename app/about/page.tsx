@@ -6,7 +6,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         kicker="About"
-        title="The person behind the work."
+        title="The Person Behind the Work"
         description="Use this page for the story that gives your portfolio context: what you care about, how you work, and where you are trying to grow."
       />
       <section className="section compact-top about-copy">

@@ -5,10 +5,10 @@ export default function ProjectsPage() {
   return (
     <>
       <section className="section simple-page-heading">
-        <p className="section-label">selected work</p>
+        <p className="section-label">Selected Work</p>
         <div className="simple-heading-row">
-          <h1>projects</h1>
-          <p>technical builds across ML infrastructure, AI agents, and cloud systems</p>
+          <h1>Projects</h1>
+          <p>Technical builds across ML infrastructure, AI agents, and cloud systems.</p>
         </div>
       </section>
       <section className="section compact-top">

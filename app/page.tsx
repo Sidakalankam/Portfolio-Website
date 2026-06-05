@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { profile, projects } from "../lib/content";
+import { profile } from "../lib/content";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         </h1>
 
         <p>
-          Hi, I&apos;m Siddarth Akalankam, a CS grad from Michigan State and a
+          Hi, I&apos;m Siddarth Akalankam, a recent CS grad from Michigan State and a
           software engineer focused on cloud infrastructure, AI/ML, and backend
           systems.
         </p>
@@ -29,15 +29,15 @@ export default function Home() {
           reliability actually matter.
         </p>
 
-        <div className="about-links" aria-label="Primary links">
-          <Link href="/projects">projects</Link>
+        <div className="about-links" aria-label="Primary Links">
+          <Link href="/projects">Projects</Link>
 
           <a
             href="/resume/Siddarth_Akalankam_Resume_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            resume
+            Resume
           </a>
 
           <a
@@ -45,7 +45,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            github
+            GitHub
           </a>
 
           <a
@@ -53,12 +53,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            linkedin
+            LinkedIn
           </a>
         </div>
       </div>
 
-      <aside className="profile-side" aria-label="Profile summary">
+      <aside className="profile-side" aria-label="Profile Summary">
         <div className="identity-card">
           <div className="profile-photo-frame">
             <Image
@@ -76,17 +76,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="profile-projects">
-          {projects.slice(0, 3).map((project) => (
-            <Link
-              href={`/projects/${project.slug}`}
-              key={project.slug}
-            >
-              <span>{project.name}</span>
-              <small>{project.subtitle}</small>
-            </Link>
-          ))}
-        </div>
       </aside>
     </section>
   );

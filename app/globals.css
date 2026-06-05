@@ -103,16 +103,22 @@ h3 {
 
 .brand-mark {
   align-items: center;
-  background: rgba(22, 154, 196, 0.13);
+  background: #111;
   border: 1px solid rgba(22, 154, 196, 0.32);
   border-radius: 8px;
-  color: var(--accent);
   display: inline-flex;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 0.82rem;
   height: 34px;
   justify-content: center;
+  overflow: hidden;
   width: 34px;
+}
+
+.brand-mark img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  width: 100%;
 }
 
 .site-nav {
@@ -279,42 +285,6 @@ h3 {
   font-weight: 700;
 }
 
-.profile-projects {
-  display: grid;
-  gap: 0;
-  padding-left: 18px;
-}
-
-.profile-projects a {
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 2px;
-  padding: 12px 0;
-  position: relative;
-}
-
-.profile-projects a::before {
-  background: var(--accent);
-  border-radius: 999px;
-  content: "";
-  height: 5px;
-  left: -18px;
-  position: absolute;
-  top: 20px;
-  width: 5px;
-}
-
-.profile-projects span {
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.profile-projects small {
-  color: #bdbdbd;
-  font-size: 0.85rem;
-  line-height: 1.35;
-}
-
 .kicker {
   color: var(--accent);
   font-size: 0.78rem;
@@ -410,8 +380,7 @@ h3 {
   max-width: 760px;
 }
 
-.project-grid,
-.contribution-grid {
+.project-grid {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -579,29 +548,6 @@ h3 {
 .strong {
   color: var(--ink);
   font-weight: 750;
-}
-
-.contribution-band {
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 34px;
-  grid-template-columns: 0.75fr 1.25fr;
-  padding-top: 32px;
-}
-
-.contribution-list {
-  display: grid;
-  gap: 20px;
-}
-
-.contribution-list article {
-  border-top: 1px solid var(--line);
-  padding-top: 18px;
-}
-
-.contribution-list h3 {
-  color: var(--soft);
-  margin-bottom: 8px;
 }
 
 .page-header {
@@ -815,13 +761,11 @@ h3 {
 
   .section-heading,
   .split-section,
-  .contribution-band,
   .resume-layout {
     grid-template-columns: 1fr;
   }
 
-  .project-grid,
-  .contribution-grid {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 

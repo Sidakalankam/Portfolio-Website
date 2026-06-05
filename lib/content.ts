@@ -25,12 +25,11 @@ export const profile = {
 };
 
 export const navItems = [
-  { label: "about", href: "/" },
-  { label: "projects", href: "/projects" },
-  { label: "experience", href: "/experience" },
-  { label: "contributions", href: "/contributions" },
+  { label: "About", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/experience" },
   {
-    label: "resume",
+    label: "Resume",
     href: "/resume/Siddarth_Akalankam_Resume_2026.pdf",
     external: true,
   },
@@ -42,7 +41,7 @@ export const projects: Project[] = [
     subtitle: "Infrastructure for production-ready model APIs",
     summary:
       "A platform for deploying ONNX models and instantly generating production-ready inference APIs without managing infrastructure.",
-    role: "ML infrastructure",
+    role: "ML Infrastructure",
     stack: [
       "Next.js",
       "FastAPI",
@@ -57,12 +56,12 @@ export const projects: Project[] = [
       "Keeps deployment, API generation, and runtime concerns in one workflow.",
       "Focuses on reducing infrastructure work for model builders.",
     ],
-    links: [{ label: "Live site", href: "https://flashml.dev" }],
+    links: [{ label: "Live Site", href: "https://flashml.dev" }],
   },
   {
     slug: "finforge",
     name: "FinForge",
-    subtitle: "AI agent for personal finance",
+    subtitle: "AI Agent for Personal Finance",
     summary:
       "An AI agent for personal finance that analyzes spending data, generates personalized briefings, and answers questions about your finances.",
     role: "Agentic AI",
@@ -82,7 +81,7 @@ export const projects: Project[] = [
       "Generates briefings that summarize spending patterns and next actions.",
       "Uses natural-language interaction to help users reason about personal finances.",
     ],
-    links: [{ label: "Live site", href: "https://finforgeai.app" }],
+    links: [{ label: "Live Site", href: "https://finforgeai.app" }],
   },
 ];
 
@@ -108,16 +107,18 @@ export const experiences = [
     role: "Software Engineering Intern",
     organization: "Altair",
     stack: [
+      "Azure",
+      "Cloud model deployment",
       "Production APIs",
       "NVIDIA Jetson",
-      "Edge inference",
+      "Edge model deployment",
       "Microservices",
     ],
     impact: "Reduced inference latency to near real-time",
     problem:
-      "Data scientists often have strong models but lack the infrastructure expertise required to deploy them reliably across cloud and edge environments.",
+      "Data scientists often have strong models but lack the infrastructure expertise required to deploy them reliably to cloud environments and edge devices.",
     contribution:
-      "Worked on a deployment platform that helped data scientists ship machine learning models without managing Kubernetes, containers, networking, or hardware acceleration. Built production APIs, optimized inference pipelines for NVIDIA Jetson devices, and integrated the platform into Altair's microservice ecosystem.",
+      "Created a deployment platform that helped data scientists ship machine learning models to Azure cloud environments and NVIDIA Jetson edge devices without managing Kubernetes, containers, networking, or hardware acceleration. Built production APIs, optimized Jetson inference pipelines, and integrated the platform into Altair's microservice ecosystem.",
   },
   {
     title: "RecycleMe",
@@ -134,24 +135,6 @@ export const experiences = [
       "Recycling decisions are often manual and unclear, making it harder for users to quickly identify materials and dispose of them correctly.",
     contribution:
       "Deployed computer vision models that classified recyclable materials and integrated predictions into a mobile application. Moving inference closer to the user improved response times, reduced reliance on external services, and replaced manual classification with automated image-based predictions.",
-  },
-];
-
-export const contributions = [
-  {
-    title: "Open-source contributions",
-    description:
-      "Track pull requests, issue triage, documentation improvements, or library work that shows engineering judgment.",
-  },
-  {
-    title: "Technical writing",
-    description:
-      "Add posts, project notes, architecture breakdowns, or learning writeups that demonstrate how you think.",
-  },
-  {
-    title: "Community and leadership",
-    description:
-      "Include hackathons, student groups, mentoring, or team leadership where the work had a concrete outcome.",
   },
 ];
 
