@@ -1,0 +1,45 @@
+import { experiences } from "../../lib/content";
+
+export default function ExperiencePage() {
+  return (
+    <>
+      <section className="section simple-page-heading">
+        <p className="section-label">professional work</p>
+        <div className="simple-heading-row">
+          <h1>experience</h1>
+          <p>internship and capstone work across backend systems, observability, and ML deployment</p>
+        </div>
+      </section>
+      <section className="section compact-top">
+        <div className="experience-list">
+          {experiences.map((item) => (
+            <article className="experience-card" key={`${item.title}-${item.role}`}>
+              <div className="experience-card-header">
+                <div>
+                  <p className="card-meta">{item.organization}</p>
+                  <h2>{item.title}</h2>
+                  <p className="strong">{item.role}</p>
+                </div>
+              </div>
+              <div className="experience-copy-grid">
+                <div>
+                  <p className="experience-label">Problem</p>
+                  <p className="experience-description">{item.problem}</p>
+                </div>
+                <div>
+                  <p className="experience-label">Built / Contributed</p>
+                  <p className="experience-description">{item.contribution}</p>
+                </div>
+              </div>
+              <ul className="tag-list experience-stack" aria-label={`${item.title} technologies`}>
+                {item.stack.map((technology) => (
+                  <li key={technology}>{technology}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
