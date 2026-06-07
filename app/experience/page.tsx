@@ -31,6 +31,14 @@ export default function ExperiencePage() {
                   <p className="experience-description">{item.contribution}</p>
                 </div>
               </div>
+              <div className="experience-highlights">
+                <p className="experience-label">Key Metrics & Highlights</p>
+                <ul>
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </div>
               <ul className="tag-list experience-stack" aria-label={`${item.title} Technologies`}>
                 {item.stack.map((technology) => (
                   <li key={technology}>{technology}</li>

@@ -13,7 +13,9 @@ export default function ResumePage() {
       <section className="section compact-top resume-layout">
         <aside className="resume-sidebar">
           <h2>Contact</h2>
-          <p>{profile.email}</p>
+          <a className="text-link" href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
           <p>{profile.location}</p>
           <Link className="text-link" href={profile.github}>GitHub</Link>
           <Link className="text-link" href={profile.linkedin}>LinkedIn</Link>

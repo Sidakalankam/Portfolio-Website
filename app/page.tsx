@@ -55,6 +55,8 @@ export default function Home() {
           >
             LinkedIn
           </a>
+
+          <a href={`mailto:${profile.email}`}>Email</a>
         </div>
       </div>
 

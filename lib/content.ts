@@ -19,7 +19,7 @@ export const profile = {
   title:
     "I build cloud-native applications, AI systems, and machine learning infrastructure.",
   location: "Troy, Michigan, United States",
-  email: "Sidaka.business@gmail.com",
+  email: "sidaka.business@gmail.com",
   github: "https://github.com/Sidakalankam",
   linkedin: "https://www.linkedin.com/in/siddarth-akalankam",
 };
@@ -33,6 +33,7 @@ export const navItems = [
     href: "/resume/Siddarth_Akalankam_Resume_2026.pdf",
     external: true,
   },
+  { label: "Contact", href: "/contact" },
 ];
 export const projects: Project[] = [
   {
@@ -101,6 +102,11 @@ export const experiences = [
       "Engineering teams often rely on multiple dashboards, metrics, and logs to understand system health. Investigating anomalies can require manually searching across several tools before engineers can determine what happened and where to begin troubleshooting.",
     contribution:
       "Helped build an observability and anomaly triage platform for AWS environments that centralized monitoring and investigation workflows across resources deployed in multiple regions and accounts. The platform automated metric collection and machine learning–based anomaly detection, analyzed dashboard screenshots for visual anomalies, prioritized findings based on severity, and provided direct access to relevant logs and operational context, enabling engineers to identify and investigate potential issues from a single interface.",
+    highlights: [
+      "Reduced manual investigation time by 2+ hours per day for engineering teams.",
+      "Worked across user accounts and services in every AWS region worldwide.",
+      "Reduced manual log searching from over 10,000 logs to roughly 50 relevant logs.",
+    ],
   },
   {
     title: "Altair",
@@ -119,6 +125,11 @@ export const experiences = [
       "Data scientists often have strong models but lack the infrastructure expertise required to deploy them reliably to cloud environments and edge devices.",
     contribution:
       "Created a deployment platform that helped data scientists ship machine learning models to Azure cloud environments and NVIDIA Jetson edge devices without managing Kubernetes, containers, networking, or hardware acceleration. Built production APIs, optimized Jetson inference pipelines, and integrated the platform into Altair's microservice ecosystem.",
+    highlights: [
+      "Reduced NVIDIA Jetson inference latency from about 4 seconds to about 100ms.",
+      "Supported model deployment to both Azure cloud environments and Jetson edge devices.",
+      "Built production API workflows for packaging, deploying, and running ML models.",
+    ],
   },
   {
     title: "RecycleMe",
@@ -135,6 +146,11 @@ export const experiences = [
       "Recycling decisions are often manual and unclear, making it harder for users to quickly identify materials and dispose of them correctly.",
     contribution:
       "Deployed computer vision models that classified recyclable materials and integrated predictions into a mobile application. Moving inference closer to the user improved response times, reduced reliance on external services, and replaced manual classification with automated image-based predictions.",
+    highlights: [
+      "Used ResNet-101 for recyclable material classification.",
+      "Worked with Amazon SageMaker for model training and deployment workflows.",
+      "Integrated model predictions into a mobile app experience for real-time user feedback.",
+    ],
   },
 ];
 
