@@ -41,7 +41,7 @@ export const projects: Project[] = [
     name: "FlashML",
     subtitle: "Infrastructure for production-ready model APIs",
     summary:
-      "A platform for deploying ONNX models and instantly generating production-ready inference APIs without managing infrastructure.",
+      "A platform for deploying ML models and instantly generating production-ready inference APIs without managing infrastructure.",
     role: "ML Infrastructure",
     stack: [
       "Next.js",
