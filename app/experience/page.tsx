@@ -7,7 +7,7 @@ export default function ExperiencePage() {
         <p className="section-label">Professional Work</p>
         <div className="simple-heading-row">
           <h1>Experience</h1>
-          <p>Internship and capstone work across backend systems, observability, and ML deployment.</p>
+          <p>Capstone and internship work across AWS observability, AI infrastructure, and LLM-backed systems.</p>
         </div>
       </section>
       <section className="section compact-top">
@@ -19,6 +19,11 @@ export default function ExperiencePage() {
                   <p className="card-meta">{item.organization}</p>
                   <h2>{item.title}</h2>
                   <p className="strong">{item.role}</p>
+                </div>
+                <div className="experience-meta-row" aria-label={`${item.title} details`}>
+                  <span>{item.location}</span>
+                  <span>{item.dates}</span>
+                  <span>{item.impact}</span>
                 </div>
               </div>
               <div className="experience-copy-grid">

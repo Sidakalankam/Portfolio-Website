@@ -14,6 +14,19 @@ export type Project = {
   }[];
 };
 
+export type Experience = {
+  title: string;
+  role: string;
+  organization: string;
+  location: string;
+  dates: string;
+  stack: string[];
+  impact: string;
+  problem: string;
+  contribution: string;
+  highlights: string[];
+};
+
 export const profile = {
   name: "Siddarth Akalankam",
   title:
@@ -64,7 +77,7 @@ export const projects: Project[] = [
     name: "FinForge",
     subtitle: "AI Agent for Personal Finance",
     summary:
-      "An AI agent for personal finance that analyzes spending data, generates personalized briefings, and answers questions about your finances.",
+      "An AI agent for personal finance that analyzes spending data, generates personalized briefings, and answers questions about your finances, all from your inbox.",
     role: "Agentic AI",
     stack: [
       "React",
@@ -86,70 +99,87 @@ export const projects: Project[] = [
   },
 ];
 
-export const experiences = [
+export const experiences: Experience[] = [
   {
     title: "Amazon",
     role: "Capstone Software Engineer",
     organization: "Michigan State University × Amazon",
+    location: "East Lansing, MI",
+    dates: "Jan. 2026 - Apr. 2026",
     stack: [
       "AWS",
-      "Time-series analysis",
-      "Anomaly detection",
-      "Incident triage",
+      "Java",
+      "EventBridge",
+      "Lambda",
+      "DynamoDB",
+      "IAM",
+      "SageMaker",
+      "CloudWatch",
+      "Time-series anomaly detection",
     ],
-    impact: "Saved engineering teams 2+ hours per day",
+    impact: "Reduced manual monitoring by 2+ hours daily",
     problem:
-      "Engineering teams often rely on multiple dashboards, metrics, and logs to understand system health. Investigating anomalies can require manually searching across several tools before engineers can determine what happened and where to begin troubleshooting.",
+      "Engineering teams monitoring AWS environments often need to reason across multiple services, accounts, regions, metrics, dashboards, and logs before they can identify what happened and where to start troubleshooting.",
     contribution:
-      "Helped build an observability and anomaly triage platform for AWS environments that centralized monitoring and investigation workflows across resources deployed in multiple regions and accounts. The platform automated metric collection and machine learning–based anomaly detection, analyzed dashboard screenshots for visual anomalies, prioritized findings based on severity, and provided direct access to relevant logs and operational context, enabling engineers to identify and investigate potential issues from a single interface.",
+      "Developed an observability platform that automated anomaly detection across multiple AWS services, accounts, and regions. Built Java backend services and a serverless metric ingestion pipeline using EventBridge, Lambda, and DynamoDB, collected metrics through cross-account IAM role assumption, integrated SageMaker for live time-series anomaly detection, and designed a triage interface with direct CloudWatch links to specific timestamps.",
     highlights: [
-      "Reduced manual investigation time by 2+ hours per day for engineering teams.",
-      "Worked across user accounts and services in every AWS region worldwide.",
-      "Reduced manual log searching from over 10,000 logs to roughly 50 relevant logs.",
+      "Reduced manual monitoring for engineering teams by 2+ hours daily.",
+      "Collected metrics across AWS accounts through cross-account IAM role assumption.",
+      "Cut log investigation scope from 10,000+ logs to 50 with targeted CloudWatch links.",
     ],
   },
   {
     title: "Altair",
-    role: "Software Engineering Intern",
+    role: "AI Engineering Intern",
     organization: "Altair",
+    location: "Troy, MI",
+    dates: "May 2025 - Aug. 2025",
     stack: [
       "Azure",
-      "Cloud model deployment",
-      "Production APIs",
       "NVIDIA Jetson",
-      "Edge model deployment",
+      "TensorRT",
+      "RabbitMQ",
+      "Docker",
+      "Kubernetes",
       "Microservices",
+      "GPU inference",
     ],
-    impact: "Reduced inference latency to near real-time",
+    impact: "Reduced inference latency from 4s to 100ms",
     problem:
-      "Data scientists often have strong models but lack the infrastructure expertise required to deploy them reliably to cloud environments and edge devices.",
+      "Data scientists needed a reliable way to deploy machine learning models to both Azure cloud infrastructure and NVIDIA Jetson edge devices without taking on container orchestration, hardware acceleration, and production API concerns.",
     contribution:
-      "Created a deployment platform that helped data scientists ship machine learning models to Azure cloud environments and NVIDIA Jetson edge devices without managing Kubernetes, containers, networking, or hardware acceleration. Built production APIs, optimized Jetson inference pipelines, and integrated the platform into Altair's microservice ecosystem.",
+      "Shipped a production API that enabled seamless ML model deployment to cloud and edge environments. Reduced inference latency by moving serving from CPU to GPU with TensorRT, adding in-memory model caching, and prewarming inference workers to eliminate cold starts. Integrated the platform into Altair's microservice architecture with RabbitMQ, Docker, and Kubernetes.",
     highlights: [
-      "Reduced NVIDIA Jetson inference latency from about 4 seconds to about 100ms.",
-      "Supported model deployment to both Azure cloud environments and Jetson edge devices.",
-      "Built production API workflows for packaging, deploying, and running ML models.",
+      "Enabled ML model deployment to Azure cloud infrastructure and NVIDIA Jetson edge devices.",
+      "Reduced inference latency from 4s to 100ms with TensorRT GPU serving, caching, and worker prewarming.",
+      "Integrated async microservice workflows with RabbitMQ, Docker, and Kubernetes.",
     ],
   },
   {
-    title: "RecycleMe",
-    role: "ML Software Engineering Intern",
-    organization: "RecycleMe",
+    title: "YouLearn AI",
+    role: "Software Engineering Intern",
+    organization: "YouLearn AI",
+    location: "Remote",
+    dates: "Sep. 2023 - Dec. 2023",
     stack: [
-      "Computer vision",
-      "Model deployment",
-      "Mobile integration",
-      "On-device inference",
+      "OpenAI API",
+      "Redis",
+      "MongoDB",
+      "Docker",
+      "Google Cloud Run",
+      "Pytest",
+      "Vector search",
+      "LLM orchestration",
     ],
-    impact: "Automated recyclable material classification",
+    impact: "Reduced API latency by 40%",
     problem:
-      "Recycling decisions are often manual and unclear, making it harder for users to quickly identify materials and dispose of them correctly.",
+      "A study material chatbot needed faster responses and more reliable backend workflows for repeated vector queries, conversation history, context retrieval, and LLM orchestration.",
     contribution:
-      "Deployed computer vision models that classified recyclable materials and integrated predictions into a mobile application. Moving inference closer to the user improved response times, reduced reliance on external services, and replaced manual classification with automated image-based predictions.",
+      "Reduced API latency by implementing Redis caching for frequent vector queries, designed MongoDB schemas for conversation history, containerized backend services with Docker, and deployed them to Google Cloud Run to autoscale conversational workloads. Built automated integration and end-to-end tests with Pytest to validate context retrieval accuracy, database queries, and LLM orchestration workflows.",
     highlights: [
-      "Used ResNet-101 for recyclable material classification.",
-      "Worked with Amazon SageMaker for model training and deployment workflows.",
-      "Integrated model predictions into a mobile app experience for real-time user feedback.",
+      "Reduced chatbot API latency by 40% with Redis caching for frequent vector queries.",
+      "Deployed containerized backend services to Google Cloud Run for autoscaling workloads.",
+      "Built automated integration and E2E tests for retrieval, database, and LLM workflows.",
     ],
   },
 ];

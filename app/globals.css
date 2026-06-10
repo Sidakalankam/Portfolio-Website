@@ -654,6 +654,25 @@ h3 {
   margin: 8px 0;
 }
 
+.experience-meta-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.experience-meta-row span {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 0.88rem;
+  font-weight: 640;
+  line-height: 1.35;
+  padding: 8px 10px;
+}
+
 .experience-copy-grid {
   display: grid;
   gap: 20px;
